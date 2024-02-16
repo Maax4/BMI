@@ -6,6 +6,16 @@ Created on Tue Mar  7 14:16:50 2023
 @author: markwin
 """
 
+import streamlit as st
+
+st.title("Welocme to BMI calculator")
+
+#Input
+
+weight = st.number_input("Enter your weight in KG", step = 0.1)
+
+height = st.number_input("Enter your height in Meters", step = 0.01)
+
 class BMI:
     def __init__(self, height_value, weight_value):
 
@@ -29,3 +39,7 @@ class BMI:
         print('You are overweight, fatso.')
       else:
         print('You are obese, fatty bom bom.')
+
+button = st.button("Calculate BMI")
+if button:
+    calculate_bmi()
