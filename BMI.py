@@ -29,6 +29,6 @@ def calculate_BMI_and_display_weight_status():
   else:
     st.success('You are obese, fatty bom bom.')
 
-button = st.balloons("Calculate BMI")
+button = st.balloon("Calculate BMI")
 if button:
     calculate_BMI_and_display_weight_status()
