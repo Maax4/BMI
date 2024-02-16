@@ -32,4 +32,4 @@ def calculate_BMI_and_display_weight_status(weight, height):
 
 button = st.button("Calculate BMI")
 if button:
-    calculate_BMI_and_display_weight_status()
+    calculate_BMI_and_display_weight_status(weight, height)
