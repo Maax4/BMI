@@ -16,9 +16,9 @@ weight = st.number_input("Enter your weight in KG", step = 0.1)
 
 height = st.number_input("Enter your height in Meters", step = 0.01)
 
-def calculate_BMI_and_display_weight_status(self):
+def calculate_BMI_and_display_weight_status(weight, height):
 
-  BMI_value = self.weight_value / self.height_value ** 2
+  BMI_value = weight / height ** 2
   return BMI_value
 
   if BMI_value < 18.5:
