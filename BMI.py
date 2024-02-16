@@ -16,7 +16,7 @@ weight = st.number_input("Enter your weight in KG", step = 0.1)
 
 height = st.number_input("Enter your height in Meters", step = 0.01)
 
-def calculate_BMI_and_display_weight_status(weight, height):
+def calculate_BMI_and_display_weight_status():
 
   BMI_value = weight / height ** 2
   return BMI_value
@@ -32,4 +32,4 @@ def calculate_BMI_and_display_weight_status(weight, height):
 
 button = st.button("Calculate BMI")
 if button:
-    calculate_BMI_and_display_weight_status(weight, height)
+    calculate_BMI_and_display_weight_status()
