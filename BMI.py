@@ -19,7 +19,6 @@ height = st.number_input("Enter your height in Meters", step = 0.01)
 def calculate_BMI_and_display_weight_status():
 
   BMI_value = weight / height ** 2
-  return BMI_value
 
   if BMI_value < 18.5:
     print('You are underweight, skinny.')
