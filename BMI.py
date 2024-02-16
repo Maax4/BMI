@@ -21,13 +21,13 @@ def calculate_BMI_and_display_weight_status():
   BMI_value = weight / height ** 2
 
   if BMI_value < 18.5:
-    print('You are underweight, skinny.')
+    st.success('You are underweight, skinny.')
   elif BMI_value >= 18.5 and BMI_value <= 22.9:
-    print('You have normal weight.')
+    st.success('You have normal weight.')
   elif BMI_value > 22.9 and BMI_value <= 29.9:
-    print('You are overweight, fatso.')
+    st.success('You are overweight, fatso.')
   else:
-    print('You are obese, fatty bom bom.')
+    st.success('You are obese, fatty bom bom.')
 
 button = st.button("Calculate BMI")
 if button:
