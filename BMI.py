@@ -42,4 +42,4 @@ class BMI:
 
 button = st.button("Calculate BMI")
 if button:
-    calculate_bmi()
+    calculate_BMI()
