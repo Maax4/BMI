@@ -6,30 +6,26 @@ Created on Tue Mar  7 14:16:50 2023
 @author: markwin
 """
 
-import streamlit as st
+class BMI:
+    def __init__(self, height_value, weight_value):
 
-st.title("Welocme to BMI calculator")
+      self.height_value = height_value
+      self.weight_value = weight_value
 
-#Input
+    def calculate_BMI(self):
 
-weight = st.number_input("Enter your weight in KG", step = 0.1)
+      BMI_value = self.weight_value / self.height_value ** 2
+      return BMI_value
 
-height = st.number_input("Enter your height in Meters", step = 0.01)
+    def displayweightstatus(self):
 
-def calculate_bmi():
-    bmi = weight/(height)**2
-    bmi_thresholds = [18.5, 23, 27.5]
-    level_labels = ['Risk of nutritional deficiency','Low Risk','Moderate Risk','High Risk']
-    if bmi <= bmi_thresholds[0]:
-        level = level_labels[0]
-    elif bmi <= bmi_thresholds[1]:
-        level = level_labels[1]
-    elif bmi <= bmi_thresholds[2]:
-        level = level_labels[2]
-    else:
-        level = level_labels[3]
-    st. success(f"Your BMI is {bmi}. You are at {level}")
+      BMI_value = self.weight_value / self.height_value ** 2
 
-button = st.button("Calculate BMI")
-if button:
-    calculate_bmi()
+      if BMI_value < 18.5:
+        print('You are underweight, skinny.')
+      elif BMI_value >= 18.5 and BMI_value <= 22.9:
+        print('You have normal weight.')
+      elif BMI_value > 22.9 and BMI_value <= 29.9:
+        print('You are overweight, fatso.')
+      else:
+        print('You are obese, fatty bom bom.')
